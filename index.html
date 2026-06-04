@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 
-<html class="light" lang="es" xmlns="http://www.w3.org/1999/html"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Genesis Ardiles | Full Stack Developer &amp; Business Admin</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
+<html class="light" lang="es" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Genesis Ardiles | Full Stack Developer &amp; Business Admin</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+          rel="stylesheet"/>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(224, 227, 229, 0.8);
             transition: all 0.3s ease-in-out;
         }
+
         .glow-hover:hover {
             box-shadow: 0px 8px 30px rgba(0, 88, 190, 0.08);
             border-color: rgba(0, 88, 190, 0.3);
             transform: translateY(-4px);
         }
+
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
             background: #f7f9fb;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #c2c6d6;
             border-radius: 10px;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         .reveal-section {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
+
         .reveal-section.revealed {
             opacity: 1;
             transform: translateY(0);
         }
+
         .nav-link-active {
             color: #0058be !important;
             position: relative;
         }
+
         .nav-link-active::after {
             content: '';
             position: absolute;
@@ -59,7 +71,7 @@
             border-radius: 99px;
         }
     </style>
-<script id="tailwind-config">
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -142,7 +154,11 @@
                         "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
                         "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
                         "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                        "display-lg-mobile": ["32px", {
+                            "lineHeight": "1.2",
+                            "letterSpacing": "-0.01em",
+                            "fontWeight": "700"
+                        }]
                     }
                 }
             }
@@ -154,465 +170,509 @@
 <body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
 <!-- Top Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm transition-all duration-300 ease-in-out py-4">
-<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-[1440px] mx-auto">
-<a class="text-headline-md font-display-lg text-primary tracking-tight" href="#">Genesis Ardiles</a>
-<div class="hidden md:flex items-center gap-8" id="desktop-nav">
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md nav-link" href="#about">Acerca de mí</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md nav-link" href="#skills">Habilidades</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md nav-link" href="#experience">Experiencia</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md nav-link" href="#education">Formación</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md nav-link" href="#certifications">Certificaciones</a>
-<a class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:shadow-lg hover:bg-primary-container active:scale-95 transition-all" href="#footer">Contactar</a>
-</div>
-<button class="md:hidden text-primary" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
+    <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-[1440px] mx-auto">
+        <a class="text-headline-md font-display-lg text-primary tracking-tight" href="#">Genesis Ardiles</a>
+        <div class="hidden md:flex items-center gap-8" id="desktop-nav">
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md nav-link"
+               href="#about">Acerca de mí</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md nav-link"
+               href="#skills">Habilidades</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md nav-link"
+               href="#experience">Experiencia</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md nav-link"
+               href="#education">Formación</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md nav-link"
+               href="#certifications">Certificaciones</a>
+            <a class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:shadow-lg hover:bg-primary-container active:scale-95 transition-all"
+               href="#footer">Contactar</a>
+        </div>
+        <button class="md:hidden text-primary"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </div>
 </nav>
 <!-- Mobile Menu Overlay -->
 <div class="hidden fixed inset-0 z-[60] bg-surface flex flex-col p-margin-mobile md:hidden" id="mobile-menu">
-<div class="flex justify-between items-center mb-12">
-<span class="text-headline-md font-display-lg text-primary">GA</span>
-<button class="text-primary" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-<span class="material-symbols-outlined">close</span>
-</button>
-</div>
-<div class="flex flex-col gap-6 text-center">
-<a class="text-headline-md font-display-lg text-on-surface" href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Acerca de mí</a>
-<a class="text-headline-md font-display-lg text-on-surface" href="#skills" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Habilidades</a>
-<a class="text-headline-md font-display-lg text-on-surface" href="#experience" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Experiencia</a>
-<a class="bg-primary text-on-primary px-6 py-4 rounded-lg font-bold mt-8" href="#footer" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contactar</a>
-</div>
+    <div class="flex justify-between items-center mb-12">
+        <span class="text-headline-md font-display-lg text-primary">GA</span>
+        <button class="text-primary" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <div class="flex flex-col gap-6 text-center">
+        <a class="text-headline-md font-display-lg text-on-surface" href="#about"
+           onclick="document.getElementById('mobile-menu').classList.add('hidden')">Acerca de mí</a>
+        <a class="text-headline-md font-display-lg text-on-surface" href="#skills"
+           onclick="document.getElementById('mobile-menu').classList.add('hidden')">Habilidades</a>
+        <a class="text-headline-md font-display-lg text-on-surface" href="#experience"
+           onclick="document.getElementById('mobile-menu').classList.add('hidden')">Experiencia</a>
+        <a class="bg-primary text-on-primary px-6 py-4 rounded-lg font-bold mt-8" href="#footer"
+           onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contactar</a>
+    </div>
 </div>
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center pt-24 overflow-hidden px-margin-mobile md:px-margin-desktop">
-<div class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10"></div>
-<div class="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-secondary/5 rounded-full blur-[100px] -z-10"></div>
-<div class="grid md:grid-cols-2 gap-12 items-center max-w-[1440px] mx-auto w-full">
-<div class="space-y-6">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm">
+    <div class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10"></div>
+    <div class="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-secondary/5 rounded-full blur-[100px] -z-10"></div>
+    <div class="grid md:grid-cols-2 gap-12 items-center max-w-[1440px] mx-auto w-full">
+        <div class="space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm">
 <span class="relative flex h-2 w-2">
 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
 <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
 </span>
                 DISPONIBLE PARA NUEVOS PROYECTOS
             </div>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight">
+            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight">
                 Génesis Ardiles Barraza
             </h1>
-<p class="font-headline-md text-headline-md text-primary">
+            <p class="font-headline-md text-headline-md text-primary">
                 Full Stack Developer Trainee | Experta en Ventas y Administración
             </p>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                Más de 5 años impulsando resultados en ventas retail y mayoristas, superando metas comerciales y generando valor para clientes y empresas. Actualmente complemento mi experiencia comercial con formación en Administración de Empresas y Desarrollo Full Stack JavaScript.
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                Más de 5 años impulsando resultados en ventas retail y mayoristas, superando metas comerciales y
+                generando valor para clientes y empresas. Actualmente complemento mi experiencia comercial con formación
+                en Administración de Empresas y Desarrollo Full Stack JavaScript.
             </p>
-<div class="flex flex-wrap gap-4 pt-4">
-<a class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold shadow-lg hover:shadow-primary/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2" href="#skills">
+            <div class="flex flex-wrap gap-4 pt-4">
+                <a class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold shadow-lg hover:shadow-primary/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
+                   href="#skills">
                     Ver Portafolio <span class="material-symbols-outlined">arrow_downward</span>
-</a>
-<button class="border border-outline-variant text-on-surface px-8 py-3 rounded-lg font-bold hover:bg-surface-container hover:border-primary transition-all active:scale-95">
-                    Descargar CV
+                </a>
+                <button class="border border-outline-variant text-on-surface px-8 py-3 rounded-lg font-bold hover:bg-surface-container hover:border-primary transition-all active:scale-95">
+                    <a href="./static/rsc/cv_genesisardiles.pdf" download="CV_Genesis_Ardiles.pdf">
+                        Descargar CV
+                    </a>
                 </button>
-</div>
-</div>
-<div class="relative flex justify-center items-center">
-<div class="w-full aspect-square max-w-md bg-white rounded-2xl overflow-hidden glass-card p-2 shadow-xl transition-all duration-700">
-<img alt="Genesis Ardiles Barraza Professional Portrait" class="w-full h-full object-cover rounded-xl transition-all duration-700 cursor-pointer hover:scale-105" src="static/IMG/gpab.jpeg"/>
-</div>
-</div>
-</div>
+            </div>
+        </div>
+        <div class="relative flex justify-center items-center">
+            <div class="w-full aspect-square max-w-md bg-white rounded-2xl overflow-hidden glass-card p-2 shadow-xl transition-all duration-700">
+                <img alt="Genesis Ardiles Barraza Professional Portrait"
+                     class="w-full h-full object-cover rounded-xl transition-all duration-700 cursor-pointer hover:scale-105"
+                     src="static/img/gpab.jpeg"/>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Acerca de mí Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low reveal-section" id="about">
-<div class="max-w-[1440px] mx-auto">
-<div class="grid md:grid-cols-12 gap-12 items-start">
-<div class="md:col-span-4 md:sticky md:top-32">
-<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-primary mb-4 flex items-center gap-4">
-<span class="w-12 h-[2px] bg-primary"></span> Acerca de mí
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low reveal-section"
+         id="about">
+    <div class="max-w-[1440px] mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 items-start">
+            <div class="md:col-span-4 md:sticky md:top-32">
+                <h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-primary mb-4 flex items-center gap-4">
+                    <span class="w-12 h-[2px] bg-primary"></span> Acerca de mí
                 </h2>
-<p class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Trayectoria &amp; Propósito</p>
-</div>
-<div class="md:col-span-8 space-y-8">
-<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
-                    Con más de 5 años de experiencia en ventas y administración, he desarrollado una capacidad excepcional para la gestión comercial y el cumplimiento de metas ambiciosas. Mi trayectoria en el sector retail y mayorista, sumada a mi formación técnica y profesional en administración, me ha permitido entender profundamente las necesidades del cliente y las operaciones internas de las empresas.
+                <p class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Trayectoria &amp;
+                    Propósito</p>
+            </div>
+            <div class="md:col-span-8 space-y-8">
+                <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                    Con más de 5 años de experiencia en ventas y administración, he desarrollado una capacidad
+                    excepcional para la gestión comercial y el cumplimiento de metas ambiciosas. Mi trayectoria en el
+                    sector retail y mayorista, sumada a mi formación técnica y profesional en administración, me ha
+                    permitido entender profundamente las necesidades del cliente y las operaciones internas de las
+                    empresas.
                 </p>
-<div class="grid sm:grid-cols-2 gap-6">
-<div class="glass-card glow-hover p-6 rounded-xl shadow-sm">
-<span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">public</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Visión Global</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Experiencia internacional en Canadá, trabajando en equipos multiculturales y adaptándome a entornos desafiantes.</p>
-</div>
-<div class="glass-card glow-hover p-6 rounded-xl border-l-4 border-l-primary shadow-sm">
-<span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">code</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Evolución Tech</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Actualmente potenciando mi perfil administrativo con formación en Desarrollo Full Stack JavaScript, ampliando mis competencias tecnológicas y digitales.
-    .</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="glass-card glow-hover p-6 rounded-xl shadow-sm">
+                        <span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">public</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Visión Global</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Experiencia internacional en
+                            Canadá, trabajando en equipos multiculturales y adaptándome a entornos desafiantes.</p>
+                    </div>
+                    <div class="glass-card glow-hover p-6 rounded-xl border-l-4 border-l-primary shadow-sm">
+                        <span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px;">code</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Evolución Tech</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Actualmente potenciando mi perfil
+                            administrativo con formación en Desarrollo Full Stack JavaScript, ampliando mis competencias
+                            tecnológicas y digitales.
+                            .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Habilidades -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop overflow-hidden reveal-section" id="skills">
-<div class="max-w-[1440px] mx-auto">
-<div class="text-center mb-16">
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Habilidades &amp; Expertise</h2>
-<p class="text-on-surface-variant font-body-lg">Dominio técnico para la gestión y el desarrollo</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Technical Column -->
-<div class="glass-card glow-hover p-8 rounded-2xl md:row-span-2 shadow-sm">
-<div class="flex items-center gap-3 mb-8">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">terminal</span>
-<h3 class="font-headline-md text-headline-md text-on-surface">Technical Stack</h3>
-</div>
-<div class="space-y-6">
-<div>
-<div class="flex justify-between mb-2">
-<span class="font-body-md text-on-surface">Microsoft Excel Avanzado</span>
-<span class="text-primary font-label-sm">Expert</span>
-</div>
-<div class="h-1 bg-surface-container-high rounded-full overflow-hidden">
-<div class="h-full bg-primary w-[95%]"></div>
-</div>
-</div>
-<div>
-<div class="flex justify-between mb-2">
-<span class="font-body-md text-on-surface">Full Stack JavaScript</span>
-<span class="text-primary font-label-sm">Trainee</span>
-</div>
-<div class="h-1 bg-surface-container-high rounded-full overflow-hidden">
-<div class="h-full bg-primary w-[70%]"></div>
-</div>
-</div>
-<div>
-<div class="flex justify-between mb-2">
-<span class="font-body-md text-on-surface">SAP ERP</span>
-<span class="text-primary font-label-sm">Avanzado</span>
-</div>
-<div class="h-1 bg-surface-container-high rounded-full overflow-hidden">
-<div class="h-full bg-primary w-[85%]"></div>
-</div>
-</div>
-</div>
-<div class="flex flex-wrap gap-2 mt-12">
-<span class="bg-surface-container px-3 py-1 rounded text-label-sm font-label-sm text-on-surface border border-outline-variant/30">Node.js</span>
-<span class="bg-surface-container px-3 py-1 rounded text-label-sm font-label-sm text-on-surface border border-outline-variant/30">React</span>
-<span class="bg-surface-container px-3 py-1 rounded text-label-sm font-label-sm text-on-surface border border-outline-variant/30">PostgreSQL</span>
-<span class="bg-surface-container px-3 py-1 rounded text-label-sm font-label-sm text-on-surface border border-outline-variant/30">API REST</span>
-</div>
-</div>
-<!-- Commercial Column -->
-<div class="glass-card glow-hover p-8 rounded-2xl md:col-span-2 shadow-sm">
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">trending_up</span>
-<h3 class="font-headline-md text-headline-md text-on-surface">Gestión Comercial</h3>
-</div>
-<div class="grid sm:grid-cols-2 gap-4">
-<div class="bg-white p-4 rounded-xl border border-outline-variant/30 flex items-center gap-4 hover:border-primary transition-all shadow-sm">
-<span class="material-symbols-outlined text-tertiary">analytics</span>
-<span class="font-body-md text-on-surface">Manejo de KPI y Cumplimiento de Metas</span>
-</div>
-<div class="bg-white p-4 rounded-xl border border-outline-variant/30 flex items-center gap-4 hover:border-primary transition-all shadow-sm">
-<span class="material-symbols-outlined text-tertiary">handshake</span>
-<span class="font-body-md text-on-surface">Negociación Comercial</span>
-</div>
-<div class="bg-white p-4 rounded-xl border border-outline-variant/30 flex items-center gap-4 hover:border-primary transition-all shadow-sm">
-<span class="material-symbols-outlined text-tertiary">groups</span>
-<span class="font-body-md text-on-surface">Atención y Fidelización de Clientes</span>
-</div>
-<div class="bg-white p-4 rounded-xl border border-outline-variant/30 flex items-center gap-4 hover:border-primary transition-all shadow-sm">
-<span class="material-symbols-outlined text-tertiary">inventory</span>
-<span class="font-body-md text-on-surface">Planificación Orientada a Resultados</span>
-</div>
-</div>
-</div>
-<!-- Soft Skills -->
-<div class="glass-card glow-hover p-8 rounded-2xl shadow-sm">
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">psychology</span>
-<h3 class="font-headline-md text-headline-md text-on-surface">Soft Skills</h3>
-</div>
-<div class="flex flex-wrap gap-3">
-<span class="bg-primary/5 text-primary px-4 py-2 rounded-full font-body-md border border-primary/10 hover:bg-primary/10 transition-all cursor-default">Adaptabilidad</span>
-<span class="bg-primary/5 text-primary px-4 py-2 rounded-full font-body-md border border-primary/10 hover:bg-primary/10 transition-all cursor-default">Trabajo en equipo</span>
-<span class="bg-primary/5 text-primary px-4 py-2 rounded-full font-body-md border border-primary/10 hover:bg-primary/10 transition-all cursor-default">Comunicación efectiva</span>
-</div>
-</div>
-<!-- Languages -->
-<div class="glass-card glow-hover p-8 rounded-2xl shadow-sm">
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">language</span>
-<h3 class="font-headline-md text-headline-md text-on-surface">Idiomas</h3>
-</div>
-<div class="space-y-6">
-<div>
-<div class="flex justify-between items-center mb-2">
-<span class="font-body-md text-on-surface">Español</span>
-<span class="font-label-sm text-outline uppercase tracking-widest">Nativo</span>
-</div>
-<div class="flex gap-1">
-<div class="h-2 flex-1 bg-primary rounded-full"></div>
-<div class="h-2 flex-1 bg-primary rounded-full"></div>
-<div class="h-2 flex-1 bg-primary rounded-full"></div>
-<div class="h-2 flex-1 bg-primary rounded-full"></div>
-</div>
-</div>
-<div>
-<div class="flex justify-between items-center mb-2">
-<span class="font-body-md text-on-surface">Inglés</span>
-<span class="font-label-sm text-outline uppercase tracking-widest">Intermedio</span>
-</div>
-<div class="flex gap-1">
-<div class="h-2 flex-1 bg-primary rounded-full"></div>
-<div class="h-2 flex-1 bg-primary rounded-full"></div>
-<div class="h-2 flex-1 bg-surface-container-high rounded-full"></div>
-<div class="h-2 flex-1 bg-surface-container-high rounded-full"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+    <div class="max-w-[1440px] mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Habilidades &amp;
+                Expertise</h2>
+            <p class="text-on-surface-variant font-body-lg">Dominio técnico para la gestión y el desarrollo</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Technical Column -->
+            <div class="glass-card glow-hover p-8 rounded-2xl md:row-span-2 shadow-sm">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">terminal</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Technical Stack</h3>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-body-md text-on-surface">Microsoft Excel Avanzado</span>
+                            <span class="text-primary font-label-sm">Expert</span>
+                        </div>
+                        <div class="h-1 bg-surface-container-high rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-[95%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-body-md text-on-surface">Full Stack JavaScript</span>
+                            <span class="text-primary font-label-sm">Trainee</span>
+                        </div>
+                        <div class="h-1 bg-surface-container-high rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-[70%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-body-md text-on-surface">SAP ERP</span>
+                            <span class="text-primary font-label-sm">Avanzado</span>
+                        </div>
+                        <div class="h-1 bg-surface-container-high rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-[85%]"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-12">
+                    <span class="bg-surface-container px-3 py-1 rounded text-label-sm font-label-sm text-on-surface border border-outline-variant/30">Node.js</span>
+                    <span class="bg-surface-container px-3 py-1 rounded text-label-sm font-label-sm text-on-surface border border-outline-variant/30">React</span>
+                    <span class="bg-surface-container px-3 py-1 rounded text-label-sm font-label-sm text-on-surface border border-outline-variant/30">PostgreSQL</span>
+                    <span class="bg-surface-container px-3 py-1 rounded text-label-sm font-label-sm text-on-surface border border-outline-variant/30">API REST</span>
+                </div>
+            </div>
+            <!-- Commercial Column -->
+            <div class="glass-card glow-hover p-8 rounded-2xl md:col-span-2 shadow-sm">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Gestión Comercial</h3>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-xl border border-outline-variant/30 flex items-center gap-4 hover:border-primary transition-all shadow-sm">
+                        <span class="material-symbols-outlined text-tertiary">analytics</span>
+                        <span class="font-body-md text-on-surface">Manejo de KPI y Cumplimiento de Metas</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-outline-variant/30 flex items-center gap-4 hover:border-primary transition-all shadow-sm">
+                        <span class="material-symbols-outlined text-tertiary">handshake</span>
+                        <span class="font-body-md text-on-surface">Negociación Comercial</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-outline-variant/30 flex items-center gap-4 hover:border-primary transition-all shadow-sm">
+                        <span class="material-symbols-outlined text-tertiary">groups</span>
+                        <span class="font-body-md text-on-surface">Atención y Fidelización de Clientes</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-outline-variant/30 flex items-center gap-4 hover:border-primary transition-all shadow-sm">
+                        <span class="material-symbols-outlined text-tertiary">inventory</span>
+                        <span class="font-body-md text-on-surface">Planificación Orientada a Resultados</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Soft Skills -->
+            <div class="glass-card glow-hover p-8 rounded-2xl shadow-sm">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Soft Skills</h3>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-primary/5 text-primary px-4 py-2 rounded-full font-body-md border border-primary/10 hover:bg-primary/10 transition-all cursor-default">Adaptabilidad</span>
+                    <span class="bg-primary/5 text-primary px-4 py-2 rounded-full font-body-md border border-primary/10 hover:bg-primary/10 transition-all cursor-default">Trabajo en equipo</span>
+                    <span class="bg-primary/5 text-primary px-4 py-2 rounded-full font-body-md border border-primary/10 hover:bg-primary/10 transition-all cursor-default">Comunicación efectiva</span>
+                </div>
+            </div>
+            <!-- Languages -->
+            <div class="glass-card glow-hover p-8 rounded-2xl shadow-sm">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">language</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Idiomas</h3>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-body-md text-on-surface">Español</span>
+                            <span class="font-label-sm text-outline uppercase tracking-widest">Nativo</span>
+                        </div>
+                        <div class="flex gap-1">
+                            <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                            <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                            <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                            <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-body-md text-on-surface">Inglés</span>
+                            <span class="font-label-sm text-outline uppercase tracking-widest">Intermedio</span>
+                        </div>
+                        <div class="flex gap-1">
+                            <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                            <div class="h-2 flex-1 bg-primary rounded-full"></div>
+                            <div class="h-2 flex-1 bg-surface-container-high rounded-full"></div>
+                            <div class="h-2 flex-1 bg-surface-container-high rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Experiencia Laboral -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest reveal-section" id="experience">
-<div class="max-w-[1440px] mx-auto">
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-16 text-center">Experiencia Profesional</h2>
-<div class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:via-outline-variant before:to-transparent">
-<!-- Salomón Sack -->
-<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-white text-primary shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 z-10 transition-transform group-hover:scale-125">
-<span class="material-symbols-outlined">work</span>
-</div>
-<div class="w-[calc(100%-4rem)] md:w-[45%] glass-card glow-hover p-6 rounded-xl ml-12 md:ml-0 shadow-sm">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-<h3 class="font-headline-md text-headline-md text-on-surface">Vendedora Retail y Mayorista</h3>
-<time class="font-label-sm text-label-sm text-primary font-bold">Salomón Sack S.A.</time>
-</div>
-<ul class="font-body-md text-on-surface-variant list-disc list-inside space-y-2 mt-4">
-<li>Logro sostenido entre un 100% y 130% en el cumplimiento de metas mensuales de venta.</li>
-<li>Hito comercial: Ejecución exitosa de una venta única de $90.000.000 CLP.</li>
-<li>Gestión integral de cartera de clientes y post-venta.</li>
-</ul>
-</div>
-</div>
-<!-- Canada -->
-<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-white text-primary shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 z-10 transition-transform group-hover:scale-125">
-<span class="material-symbols-outlined">flight</span>
-</div>
-<div class="w-[calc(100%-4rem)] md:w-[45%] glass-card glow-hover p-6 rounded-xl ml-12 md:ml-0 shadow-sm">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-<h3 class="font-headline-md text-headline-md text-on-surface">Experiencia Internacional</h3>
-<time class="font-label-sm text-label-sm text-primary font-bold">Canadá (Vancouver/Whistler)</time>
-</div>
-<div class="space-y-4 mt-4">
-<div>
-<h4 class="font-bold text-on-surface text-body-md">Sector Construcción:</h4>
-<p class="font-body-md text-on-surface-variant">Labores operativas en proyectos de infraestructura residencial.</p>
-</div>
-<div>
-<h4 class="font-bold text-on-surface text-body-md">Sector Hotelería (Canadá):</h4>
-<p class="font-body-md text-on-surface-variant">Experiencia en hotelería internacional, desarrollando habilidades de organización, adaptación y trabajo en equipo bajo altos estándares de calidad.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Retail 2014-2022 -->
-<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-white text-primary shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 z-10 transition-transform group-hover:scale-125">
-<span class="material-symbols-outlined">shopping_bag</span>
-</div>
-<div class="w-[calc(100%-4rem)] md:w-[45%] glass-card glow-hover p-6 rounded-xl ml-12 md:ml-0 shadow-sm">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-<h3 class="font-headline-md text-headline-md text-on-surface">Gestión Comercial Retail</h3>
-<time class="font-label-sm text-label-sm text-primary font-bold">2014 - 2022</time>
-</div>
-<p class="font-body-md text-on-surface-variant mt-4">
-                        Trayectoria consolidada en diversas empresas del retail, liderando procesos de venta, gestión de stock y fidelización de clientes corporativos e individuales.
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest reveal-section"
+         id="experience">
+    <div class="max-w-[1440px] mx-auto">
+        <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-16 text-center">
+            Experiencia Profesional</h2>
+        <div class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:via-outline-variant before:to-transparent">
+            <!-- Salomón Sack -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-white text-primary shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 z-10 transition-transform group-hover:scale-125">
+                    <span class="material-symbols-outlined">work</span>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[45%] glass-card glow-hover p-6 rounded-xl ml-12 md:ml-0 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                        <h3 class="font-headline-md text-headline-md text-on-surface">Vendedora Retail y Mayorista</h3>
+                        <time class="font-label-sm text-label-sm text-primary font-bold">Salomón Sack S.A.</time>
+                    </div>
+                    <ul class="font-body-md text-on-surface-variant list-disc list-inside space-y-2 mt-4">
+                        <li>Logro sostenido entre un 100% y 130% en el cumplimiento de metas mensuales de venta.</li>
+                        <li>Hito comercial: Ejecución exitosa de una venta única de $90.000.000 CLP.</li>
+                        <li>Gestión integral de cartera de clientes y post-venta.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Canada -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-white text-primary shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 z-10 transition-transform group-hover:scale-125">
+                    <span class="material-symbols-outlined">flight</span>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[45%] glass-card glow-hover p-6 rounded-xl ml-12 md:ml-0 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                        <h3 class="font-headline-md text-headline-md text-on-surface">Experiencia Internacional</h3>
+                        <time class="font-label-sm text-label-sm text-primary font-bold">Canadá (Vancouver/Whistler)
+                        </time>
+                    </div>
+                    <div class="space-y-4 mt-4">
+                        <div>
+                            <h4 class="font-bold text-on-surface text-body-md">Sector Construcción:</h4>
+                            <p class="font-body-md text-on-surface-variant">Labores operativas en proyectos de
+                                infraestructura residencial.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-on-surface text-body-md">Sector Hotelería (Canadá):</h4>
+                            <p class="font-body-md text-on-surface-variant">Experiencia en hotelería internacional,
+                                desarrollando habilidades de organización, adaptación y trabajo en equipo bajo altos
+                                estándares de calidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Retail 2014-2022 -->
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-white text-primary shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 z-10 transition-transform group-hover:scale-125">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </div>
+                <div class="w-[calc(100%-4rem)] md:w-[45%] glass-card glow-hover p-6 rounded-xl ml-12 md:ml-0 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                        <h3 class="font-headline-md text-headline-md text-on-surface">Gestión Comercial Retail</h3>
+                        <time class="font-label-sm text-label-sm text-primary font-bold">2014 - 2022</time>
+                    </div>
+                    <p class="font-body-md text-on-surface-variant mt-4">
+                        Trayectoria consolidada en diversas empresas del retail, liderando procesos de venta, gestión de
+                        stock y fidelización de clientes corporativos e individuales.
                     </p>
-</div>
-</div>
-</div>
-</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Formación & Certificaciones -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop reveal-section" id="education">
-<div class="max-w-[1440px] mx-auto">
-<div class="grid lg:grid-cols-2 gap-16">
-<!-- Education -->
-<div>
-<h2 class="font-display-lg text-headline-md text-on-surface mb-8 border-b-2 border-primary w-fit pb-2">Formación Académica</h2>
-<div class="space-y-6">
-<div class="p-6 bg-white rounded-xl border border-outline-variant/30 hover:border-primary transition-all group cursor-default shadow-sm">
-<h3 class="font-headline-md text-body-lg text-primary group-hover:translate-x-2 transition-transform">Ingeniería en Administración de Empresas</h3>
-<p class="text-on-surface font-body-md">AIEP</p>
-<span class="text-label-sm font-label-sm text-outline uppercase mt-2 block">Nivel Profesional (Cursando)</span>
-</div>
-<div class="p-6 bg-white rounded-xl border border-outline-variant/30 hover:border-primary transition-all group cursor-default shadow-sm">
-<h3 class="font-headline-md text-body-lg text-primary group-hover:translate-x-2 transition-transform">Técnico Profesional en Administración</h3>
-<p class="text-on-surface font-body-md">AIEP</p>
-</div>
-<div class="p-6 bg-white rounded-xl border border-outline-variant/30 hover:border-primary transition-all group cursor-default shadow-sm">
-<h3 class="font-headline-md text-body-lg text-primary group-hover:translate-x-2 transition-transform">Técnico Nivel Medio en Metalurgia</h3>
-<p class="text-on-surface font-body-md">Establecimiento Técnico Profesional</p>
-</div>
-</div>
-</div>
-<!-- Certifications -->
-<div class="scroll-mt-32" id="certifications">
-<h2 class="font-display-lg text-headline-md text-on-surface mb-8 border-b-2 border-primary w-fit pb-2">Cursos y Certificaciones</h2>
-<div class="grid gap-4">
-<div class="flex items-center gap-6 p-4 glass-card glow-hover rounded-xl shadow-sm">
-<div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg">
-<span class="material-symbols-outlined text-primary">verified</span>
-</div>
-<div>
-<h3 class="font-bold text-on-surface">Bootcamp Full Stack JavaScript</h3>
-<p class="text-on-surface-variant text-label-sm">Desarrollo Web Moderno</p>
-</div>
-</div>
-<div class="flex items-center gap-6 p-4 glass-card glow-hover rounded-xl shadow-sm">
-<div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg">
-<span class="material-symbols-outlined text-primary">table_chart</span>
-</div>
-<div>
-<h3 class="font-bold text-on-surface">Microsoft Excel Avanzado</h3>
-<p class="text-on-surface-variant text-label-sm">Análisis de datos y Macros</p>
-</div>
-</div>
-<div class="flex items-center gap-6 p-4 glass-card glow-hover rounded-xl shadow-sm">
-<div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg">
-<span class="material-symbols-outlined text-primary">settings_suggest</span>
-</div>
-<div>
-<h3 class="font-bold text-on-surface">Gestión Operativa SAP ERP</h3>
-<p class="text-on-surface-variant text-label-sm">Módulos Ventas</p>
-</div>
-</div>
-</div>
-<div class="mt-12 p-6 bg-primary/5 rounded-2xl border border-primary/20">
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary">info</span>
-<div>
-<h4 class="font-bold text-on-surface mb-2">Información Adicional</h4>
-<ul class="text-on-surface-variant font-body-md space-y-1">
-<li>• Licencia de conducir Clase B</li>
-<li>• Disponibilidad Inmediata</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+    <div class="max-w-[1440px] mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Education -->
+            <div>
+                <h2 class="font-display-lg text-headline-md text-on-surface mb-8 border-b-2 border-primary w-fit pb-2">
+                    Formación Académica</h2>
+                <div class="space-y-6">
+                    <div class="p-6 bg-white rounded-xl border border-outline-variant/30 hover:border-primary transition-all group cursor-default shadow-sm">
+                        <h3 class="font-headline-md text-body-lg text-primary group-hover:translate-x-2 transition-transform">
+                            Ingeniería en Administración de Empresas</h3>
+                        <p class="text-on-surface font-body-md">AIEP</p>
+                        <span class="text-label-sm font-label-sm text-outline uppercase mt-2 block">Nivel Profesional (Cursando)</span>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl border border-outline-variant/30 hover:border-primary transition-all group cursor-default shadow-sm">
+                        <h3 class="font-headline-md text-body-lg text-primary group-hover:translate-x-2 transition-transform">
+                            Técnico Profesional en Administración</h3>
+                        <p class="text-on-surface font-body-md">AIEP</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl border border-outline-variant/30 hover:border-primary transition-all group cursor-default shadow-sm">
+                        <h3 class="font-headline-md text-body-lg text-primary group-hover:translate-x-2 transition-transform">
+                            Técnico Nivel Medio en Metalurgia</h3>
+                        <p class="text-on-surface font-body-md">Establecimiento Técnico Profesional</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Certifications -->
+            <div class="scroll-mt-32" id="certifications">
+                <h2 class="font-display-lg text-headline-md text-on-surface mb-8 border-b-2 border-primary w-fit pb-2">
+                    Cursos y Certificaciones</h2>
+                <div class="grid gap-4">
+                    <div class="flex items-center gap-6 p-4 glass-card glow-hover rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg">
+                            <span class="material-symbols-outlined text-primary">verified</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-on-surface">Bootcamp Full Stack JavaScript</h3>
+                            <p class="text-on-surface-variant text-label-sm">Desarrollo Web Moderno</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 p-4 glass-card glow-hover rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg">
+                            <span class="material-symbols-outlined text-primary">table_chart</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-on-surface">Microsoft Excel Avanzado</h3>
+                            <p class="text-on-surface-variant text-label-sm">Análisis de datos y Macros</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 p-4 glass-card glow-hover rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg">
+                            <span class="material-symbols-outlined text-primary">settings_suggest</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-on-surface">Gestión Operativa SAP ERP</h3>
+                            <p class="text-on-surface-variant text-label-sm">Módulos Ventas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 p-6 bg-primary/5 rounded-2xl border border-primary/20">
+                    <div class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-primary">info</span>
+                        <div>
+                            <h4 class="font-bold text-on-surface mb-2">Información Adicional</h4>
+                            <ul class="text-on-surface-variant font-body-md space-y-1">
+                                <li>• Licencia de conducir Clase B</li>
+                                <li>• Disponibilidad Inmediata</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Footer -->
 <footer class="bg-surface-container-low border-t border-outline-variant/30 py-section-gap reveal-section" id="footer">
-<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-center gap-12 text-center">
-<div class="space-y-4">
-<span class="font-display-lg text-display-lg text-primary block">¿Listo para colaborar?</span>
-<p class="text-on-surface-variant font-body-lg max-w-lg mx-auto">
-                Estoy buscando mi primera oportunidad en el mundo del desarrollo web o posiciones estratégicas en administración que valoren mi perfil híbrido.
+    <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-center gap-12 text-center">
+        <div class="space-y-4">
+            <span class="font-display-lg text-display-lg text-primary block">¿Listo para colaborar?</span>
+            <p class="text-on-surface-variant font-body-lg max-w-lg mx-auto">
+                Estoy buscando mi primera oportunidad en el mundo del desarrollo web o posiciones estratégicas en
+                administración que valoren mi perfil híbrido.
             </p>
-</div>
-<div class="flex flex-wrap justify-center gap-8">
+        </div>
+        <div class="flex flex-wrap justify-center gap-8">
 
-<a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-all font-body-md hover:scale-110 active:scale-95" href="https://www.linkedin.com/in/genesis-polette-ardiles-barraza-760692302/" target="_black">
-<span class="material-symbols-outlined">link</span> LinkedIn
+            <a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-all font-body-md hover:scale-110 active:scale-95"
+               href="https://www.linkedin.com/in/genesis-polette-ardiles-barraza-760692302/" target="_black">
+                <span class="material-symbols-outlined">link</span> LinkedIn
             </a>
-<a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-all font-body-md hover:scale-110 active:scale-95" href="https://github.com/genesisardilesbarraza" target="_blank">
-<span class="material-symbols-outlined">code</span> GitHub
+            <a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-all font-body-md hover:scale-110 active:scale-95"
+               href="https://github.com/genesisardilesbarraza" target="_blank">
+                <span class="material-symbols-outlined">code</span> GitHub
             </a>
-</div>
+        </div>
 
-    <button id="btnContacto"
-            class="bg-primary text-on-primary px-12 py-4 rounded-lg font-bold text-body-lg hover:shadow-xl hover:shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
-        Contactar Ahora
-    </button>
+        <button id="btnContacto"
+                class="bg-primary text-on-primary px-12 py-4 rounded-lg font-bold text-body-lg hover:shadow-xl hover:shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
+            Contactar Ahora
+        </button>
 
-    <form id="formularioContacto" action="https://formsubmit.co/genesis.ardilesbarraza@gmail.com" method="post"
-          class="hidden max-w-2xl mx-auto mt-10 bg-white p-8 rounded-2xl shadow-xl">
-        <input type="hidden" name="_subject" value="Nuevo mensaje desde mi portafolio">
-        <input type="hidden" name="_captcha" value="false">
+        <form id="formularioContacto" action="https://formsubmit.co/genesis.ardilesbarraza@gmail.com" method="post"
+              class="hidden max-w-2xl mx-auto mt-10 bg-white p-8 rounded-2xl shadow-xl">
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde mi portafolio">
+            <input type="hidden" name="_captcha" value="false">
 
-        <fieldset class="space-y-5">
-            <legend class="text-3xl font-bold text-center mb-6 text-primary">
-                Envíame un mensaje
-            </legend>
+            <fieldset class="space-y-5">
+                <legend class="text-3xl font-bold text-center mb-6 text-primary">
+                    Envíame un mensaje
+                </legend>
 
-            <div>
-                <label class="block mb-2 font-semibold">Nombre</label>
-                <input
-                        type="text"
-                        name="nombre"
-                        required
-                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-            </div>
+                <div>
+                    <label class="block mb-2 font-semibold">Nombre</label>
+                    <input
+                            type="text"
+                            name="nombre"
+                            required
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
 
-            <div>
-                <label class="block mb-2 font-semibold">Apellido</label>
-                <input
-                        type="text"
-                        name="apellido"
-                        required
-                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-            </div>
+                <div>
+                    <label class="block mb-2 font-semibold">Apellido</label>
+                    <input
+                            type="text"
+                            name="apellido"
+                            required
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
 
-            <div>
-                <label class="block mb-2 font-semibold">Email</label>
-                <input
-                        type="email"
-                        name="email"
-                        required
-                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-            </div>
+                <div>
+                    <label class="block mb-2 font-semibold">Email</label>
+                    <input
+                            type="email"
+                            name="email"
+                            required
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
 
-            <div>
-                <label class="block mb-2 font-semibold">Teléfono</label>
-                <input
-                        type="number"
-                        name="telefono"
-                        required
-                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-            </div>
+                <div>
+                    <label class="block mb-2 font-semibold">Teléfono</label>
+                    <input
+                            type="number"
+                            name="telefono"
+                            required
+                            class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
 
-            <div>
-                <label class="block mb-2 font-semibold">Mensaje</label>
-                <textarea
-                        name="mensaje"
-                        rows="5"
-                        required
-                        class="w-full p-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-            </div>
+                <div>
+                    <label class="block mb-2 font-semibold">Mensaje</label>
+                    <textarea
+                            name="mensaje"
+                            rows="5"
+                            required
+                            class="w-full p-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                </div>
 
-            <button
-                    type="submit"
-                    class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold text-body-lg hover:shadow-xl hover:shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
-                Enviar mensaje
-            </button>
-        </fieldset>
-    </form>
+                <button
+                        type="submit"
+                        class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold text-body-lg hover:shadow-xl hover:shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
+                    Enviar mensaje
+                </button>
+            </fieldset>
+        </form>
 
-    <script>
-        const boton = document.getElementById("btnContacto");
-        const formulario = document.getElementById("formularioContacto");
+        <script>
+            const boton = document.getElementById("btnContacto");
+            const formulario = document.getElementById("formularioContacto");
 
-        boton.addEventListener("click", () => {
-            formulario.classList.remove("hidden");
-        });
-    </script>
+            boton.addEventListener("click", () => {
+                formulario.classList.remove("hidden");
+            });
+        </script>
 
-<div class="pt-8 border-t border-outline-variant/30 w-full text-on-surface-variant/60 font-label-sm text-label-sm">
+        <div class="pt-8 border-t border-outline-variant/30 w-full text-on-surface-variant/60 font-label-sm text-label-sm">
             © 2024 Genesis Ardiles Barraza. All rights reserved.
         </div>
-</div>
+    </div>
 </footer>
 <!-- FAB for direct contact -->
-<a class="fixed bottom-8 right-8 bg-primary text-on-primary p-4 rounded-full shadow-2xl z-50 hover:scale-110 hover:shadow-primary/40 active:scale-95 transition-all md:hidden" href="#footer">
-<span class="material-symbols-outlined">message</span>
+<a class="fixed bottom-8 right-8 bg-primary text-on-primary p-4 rounded-full shadow-2xl z-50 hover:scale-110 hover:shadow-primary/40 active:scale-95 transition-all md:hidden"
+   href="#footer">
+    <span class="material-symbols-outlined">message</span>
 </a>
 <script>
     // Navigation functionality and Scroll Spy
@@ -621,7 +681,7 @@
 
     function updateActiveLink() {
         let currentSectionId = '';
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
@@ -659,7 +719,7 @@
     // Event listeners
     window.addEventListener('scroll', () => {
         updateActiveLink();
-        
+
         // Navbar scroll effect
         const nav = document.querySelector('nav');
         if (window.scrollY > 50) {
@@ -681,4 +741,5 @@
     // Initialize state
     updateActiveLink();
 </script>
-</body></html>
+</body>
+</html>
